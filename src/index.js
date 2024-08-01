@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter} from 'react-router-dom';
 import {ProductProvider} from './components/Context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ProductProvider>
-      <Router>
+      <HashRouter>
         <App />
-      </Router>
+      </HashRouter>
     </ProductProvider>
   </React.StrictMode>
 );
