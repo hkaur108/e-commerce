@@ -8,20 +8,23 @@ export default class NavBar extends Component {
   render() {
     return (
       <NavWrapper className='navbar navbar-expand-lg navbar-dark px-sm-5'>
-        <Link className='nav-link' >
+      <ul className='navbar-nav  w-100 d-flex align-items-center justify-content-between'>
+        <li> 
+          <Link to="/" className='nav-link' >
           <img src={logo} alt="store-logo" className='nav-brand' />
         </Link>
-        <ul className='navbar-nav  mr-auto'>
-          <li className='nav-item ml-5'>
+        </li>
+          <li className='nav-item ml-5 text-light'>
             <Link to= "/" className='nav-link'>products</Link>
           </li>
-        </ul>
+        
         <Link to="/cart" className='ml-auto'>
           <ButtonContainer>
             <i className="fas fa-cart-plus"/>
             my cart
           </ButtonContainer>
         </Link>
+        </ul>
       </NavWrapper>
       
     )
